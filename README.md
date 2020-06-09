@@ -20,17 +20,17 @@
 
 ## Screenshots
 
-List of bookmarks
+List of bookmarks <br/>
 ![alt text](https://github.com/mrDima1996/test-assignment/blob/master/screenshots/list.png?raw=true)
 
-Filtered list of bookmarks
+Filtered list of bookmarks <br/>
 ![alt text](https://github.com/mrDima1996/test-assignment/blob/master/screenshots/list_filtered.png?raw=true)
 
-Empty "new bookmark" form
+Empty "new bookmark" form <br/>
 ![alt text](https://github.com/mrDima1996/test-assignment/blob/master/screenshots/empty_form.png?raw=true)
 
-Form with errors
+Form with errors <br/>
 ![alt text](https://github.com/mrDima1996/test-assignment/blob/master/screenshots/incorrect_form.png?raw=true)
 
-Correct Form
+Correct Form <br/>
 ![alt text](https://github.com/mrDima1996/test-assignment/blob/master/screenshots/correct_form.png?raw=true)
