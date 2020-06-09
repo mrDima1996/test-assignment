@@ -1,0 +1,33 @@
+<div class="bookmarks-wrapper">
+  <button mat-raised-button
+          color="primary"
+          class="add-new-bookmark"
+          [routerLink]="['/bookmarks/new']"
+  >Add new bookmark
+  </button>
+
+  <div class="filter-wrapper">
+    <span> Filter: </span>
+
+    <mat-form-field>
+      <mat-select [(ngModel)]="currentGroup">
+        <mat-option *ngFor="let type of bookmarksGroupType | objToArray" [value]="type">
+          {{type}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button
+            class="add-new-bookmark"
+            *ngIf="currentGroup"
+            (click)="selectGroup('')"
+    >Clear
+    </button>
+  </div>
+
+  <app-bookmark-list-item
+    *ngFor="let bookmark of (bookmarks$ | async) | filterGroup: currentGroup; trackBy: bookmarksTrackByFunction"
+    [bookmark]="bookmark"
+    (deleteThisBookmark)="deleteThisBookmark($event)"
+  ></app-bookmark-list-item>
+</div>

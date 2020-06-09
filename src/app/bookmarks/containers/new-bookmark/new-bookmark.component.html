@@ -1,0 +1,49 @@
+<div class="bookmark-form-wrapper">
+  <h3>New Bookmark</h3>
+  <form
+    class="d-flex flex-colum justify-content-start align-items-center"
+    [formGroup]="bookmarkForm"
+    (ngSubmit)="onSubmit()">
+
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput [formControl]="bookmarkForm.controls['name']" >
+      <mat-error *ngIf="bookmarkForm.controls['name'].hasError('required')">
+        Name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>URL</mat-label>
+      <input matInput [formControl]="bookmarkForm.controls['url']" >
+      <mat-error *ngIf="bookmarkForm.controls['url'].hasError('required')">
+        URL is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Group</mat-label>
+      <mat-select [formControl]="bookmarkForm.controls['group']">
+        <mat-option *ngFor="let type of bookmarksGroupType | objToArray" [value]="type">
+          {{type}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="bookmarkForm.controls['group'].hasError('required')">
+        URL is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <div class="button-wrapper">
+      <button type="submit"
+        mat-raised-button
+              color="primary"
+              class="add-new-bookmark"
+              [disabled]="!bookmarkForm.valid"
+      >Create</button>
+      <button mat-raised-button
+              class="add-new-bookmark"
+              [routerLink]="['/']"
+      >Cancel</button>
+    </div>
+  </form>
+</div>

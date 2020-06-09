@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{bookmark.name}}</mat-card-title>
+    <mat-card-subtitle>{{bookmark.group}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>URL: {{bookmark.url}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="deleteBookmark()">Remove</button>
+  </mat-card-actions>
+</mat-card>

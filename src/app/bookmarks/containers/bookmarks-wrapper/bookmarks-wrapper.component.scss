@@ -1,0 +1,17 @@
+.bookmarks-wrapper {
+  padding: 20px;
+
+  .filter-wrapper {
+    display: inline-block;
+    margin-left: 20px;
+
+    button {
+      margin-left: 20px;
+    }
+  }
+
+  button.add-new-bookmark {
+    margin-bottom: 20px;
+  }
+}
+
