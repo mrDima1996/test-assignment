@@ -8,20 +8,7 @@ export interface BookmarksListState {
 }
 
 export const BookmarksListInitialState = {
-  bookmarks: [
-    {
-      id: 1,
-      name: 'sdfsdf',
-      url: '234234',
-      group: BookmarksGroupType.work
-    },
-    {
-      id: 2,
-      name: '234',
-      url: 'fghfgh',
-      group: BookmarksGroupType.leisure
-    },
-  ]
+  bookmarks: []
 };
 
 export const BookmarksListReducer = (state = BookmarksListInitialState, action: Action | any): BookmarksListState => {

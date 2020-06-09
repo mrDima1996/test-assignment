@@ -33,7 +33,6 @@ export class BookmarksWrapperComponent implements OnInit {
   }
 
   selectGroup(group) {
-    console.log(group);
     this.currentGroup = group;
   }
 
